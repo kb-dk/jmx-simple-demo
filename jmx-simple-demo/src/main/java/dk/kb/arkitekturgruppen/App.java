@@ -11,12 +11,13 @@ import java.lang.management.ManagementFactory;
  */
 public class App {
     public static void main(String[] args) throws Exception {
-        HelloWorldBean bean = new HelloWorldBean();
+        SimpleDemoBean bean = new SimpleDemoBean();
 
         // magic here
-        ManagementFactory.getPlatformMBeanServer().registerMBean(bean, new ObjectName("dk.kb.arkitekturgruppen:type=HelloWorld"));
+        final ObjectName objectName = new ObjectName("dk.kb.arkitekturgruppen:type=HelloWorld");
+        ManagementFactory.getPlatformMBeanServer().registerMBean(bean, objectName);
         // magic done
-
+        
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         while ((bean.s = br.readLine()) != null) {
             System.out.println(bean.getUptimeMS() + " - " + bean.getS());

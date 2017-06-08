@@ -4,7 +4,7 @@ package dk.kb.arkitekturgruppen;
  * This is the implementation of the MXBeanInterface that give functionality to the methods
  * defined in the interface.
  */
-public class HelloWorldBean implements MXBeanInterface {
+public class SimpleDemoBean implements MXBeanInterface {
     long startTime = System.currentTimeMillis();
 
     public long getUptimeMS() {

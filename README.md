@@ -1,4 +1,4 @@
-# jmx-hello-world
+# jmx-simple-demo
 
 To run:
 ---
@@ -9,7 +9,7 @@ To run:
   "Hello World".  The current values of the "updateMS" and "s" fields are shown.
 * Type one or more lines of text as input to the running App.  Each time "Enter" is pressed a line showing the current number of
   milliseconds since program start and the line just typed is shown.
-* Refresh the "HelloWorld" fields in JConsole/VisualVM and see that the value of "s" is the last line entered.
+* Refresh the "HelloWorld" fields in JConsole/VisualVM (button or Alt-R in panel) and see that the value of "s" is the last line entered.
 
 ![visualvm screenshot](app-in-visualvm.png)
 
