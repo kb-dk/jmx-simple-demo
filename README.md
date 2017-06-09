@@ -1,9 +1,23 @@
 # jmx-simple-demo
 
+Source:
+---
+
+Steps:
+
+1. An interface with the getters to expose. Annotate it with `@javax.management.MXBean.  See 
+ [MXBeanInterface.java](blob/master/jmx-simple-demo/src/main/java/dk/kb/arkitekturgruppen/MXBeanInterface.java)
+2. A plain bean implementing the interface.  See
+[SimpleDemoBean.java](blob/master/jmx-simple-demo/src/main/java/dk/kb/arkitekturgruppen/SimpleDemoBean.java)
+3. Exposing the bean to JMX and update the values to get. See
+[App.java](blob/master/jmx-simple-demo/src/main/java/dk/kb/arkitekturgruppen/App.java)
+4. Use any JMX monitoring tool to see values.
+
+
 To run:
 ---
 
-* Invoke App.  It registers a bean and waits for input from the command line.
+* Invoke App (for instance with `mvn exec:java`).  It registers a bean and waits for input from the command line.
 * Start JConsole or VisualVM (in the Oracle JDK, enable JConsole-MBeans plugin), attach to "App" 
   and locate the MBean group "dk.kb.arkitekturgruppen" and click
   "Hello World".  The current values of the "updateMS" and "s" fields are shown.
