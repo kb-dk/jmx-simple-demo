@@ -10,7 +10,7 @@ Source:
 
 Steps:
 
-1. An interface with the getters to expose.  Only use simple return types. Annotate it with `@javax.management.MXBean.  See 
+1. An interface with the getters to expose.  Only use simple return types. Annotate it with `@javax.management.MXBean`.  See 
  [MXBeanInterface.java](jmx-simple-demo/src/main/java/dk/kb/arkitekturgruppen/MXBeanInterface.java)
 2. A plain bean implementing the interface.  See
 [SimpleDemoBean.java](jmx-simple-demo/src/main/java/dk/kb/arkitekturgruppen/SimpleDemoBean.java)
@@ -50,11 +50,18 @@ coding, and still get all the benefits from the client tools.
 
 The subset used in this project is:
 
-* Use MXBeans only using the `@MXBean` annotation on the interface.
+* Use MXBeans only (_not_ MBeans) using the `@MXBean` annotation on the interface. 
 * Only getters are exposed to make a read-only presentation of data.
 * No network port.  VisualVM/JConsole are used as clients and they get 
   access using the Attach API which is restricted to same user on same machine.
 
+Further reading:
+---
+
+* [The Java Tutorial - JMX](https://docs.oracle.com/javase/tutorial/jmx/index.html)
+* [The Java Tutorials - MXBeans](https://docs.oracle.com/javase/tutorial/jmx/mbeans/mxbeans.html)
+* [Java Management Extensions (JMX) - Best Practices](http://www.oracle.com/us/technologies/java/best-practices-jsp-136021.html)
+* [The Attach API](https://blogs.oracle.com/corejavatechtips/the-attach-api) - how VisualVM (and your own code) can discover and attach to a running JVM.
 
 
 /tra 2017-05-24
