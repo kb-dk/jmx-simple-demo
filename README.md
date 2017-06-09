@@ -11,11 +11,11 @@ Source:
 Steps:
 
 1. An interface with the getters to expose.  Only use simple return types. Annotate it with `@javax.management.MXBean.  See 
- [MXBeanInterface.java](blob/master/jmx-simple-demo/src/main/java/dk/kb/arkitekturgruppen/MXBeanInterface.java)
+ [MXBeanInterface.java](jmx-simple-demo/src/main/java/dk/kb/arkitekturgruppen/MXBeanInterface.java)
 2. A plain bean implementing the interface.  See
-[SimpleDemoBean.java](blob/master/jmx-simple-demo/src/main/java/dk/kb/arkitekturgruppen/SimpleDemoBean.java)
+[SimpleDemoBean.java](jmx-simple-demo/src/main/java/dk/kb/arkitekturgruppen/SimpleDemoBean.java)
 3. Exposing the bean to JMX and update the values to get. See
-[App.java](blob/master/jmx-simple-demo/src/main/java/dk/kb/arkitekturgruppen/App.java)
+[App.java](jmx-simple-demo/src/main/java/dk/kb/arkitekturgruppen/App.java)
 4. Use any JMX monitoring tool to see values.
 
 
